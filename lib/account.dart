@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone_ui/util/account_tab_1.dart';
+import 'package:instagram_clone_ui/util/account_tab_2.dart';
+import 'package:instagram_clone_ui/util/account_tab_3.dart';
+import 'package:instagram_clone_ui/util/account_tab_4.dart';
 import 'package:instagram_clone_ui/util/bubble_stories.dart';
 
 class UserAccount extends StatelessWidget {
@@ -119,7 +123,13 @@ class UserAccount extends StatelessWidget {
               Tab(icon: Icon(Icons.video_call,)),
               Tab(icon: Icon(Icons.shopping_bag_outlined,)),
               Tab(icon: Icon(Icons.person,)),
-            ])
+            ]),
+            Expanded(child: TabBarView(children: [
+              AccountTab1(),
+              AccountTab2(),
+              AccountTab3(),
+              AccountTab4(),
+            ]))
           ],
         ),
       ),
